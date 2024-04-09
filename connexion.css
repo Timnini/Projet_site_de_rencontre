@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightcoral;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4eded; 
+    color: #0d0d0d; 
+    padding: 10px; 
+    border-bottom: 2px solid black;
+}
+
+.banner h1 {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    font-size: 40px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    margin: 60px 0;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-collapse: collapse;
+    border-color: #0d0d0d;
+}
+
+th {
+    padding: 35px;
+    text-align: center;
+    border-bottom: 1px solid #e7aca5;
+    background-color: #e7aca5;
+}
+
+td {
+    padding: 35px;
+    text-align: center;
+    background-color: #e7aca5;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#titre {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    font-size: 50px;
+    background-color: #e7aca5;
+}
+
+#imgconnexion{
+    width: 450px;
+    height: 450px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container img {
+    margin-right: 20px; /* Ajoute une marge de 20px à droite de l'image */
+    border: 5px solid #0d0d0d; /* Ajoute une bordure de 5px solide avec la couleur de fond du conteneur */
+    border-radius: 10px; /* Ajoute un rayon de bordure de 10px pour adoucir les coins */
+    box-shadow: 0 4px 8px rgba(17, 4, 4, 0.1); /* Ajoute une ombre légère pour donner de la profondeur */
+}
+
+.container p {
+    margin-right: 100px; /* Ajoute une marge de 20px à droite de l'image */
+}
+
+p{
+    margin: 0;
+    font-size: 30px;
+    text-align: center; 
+}
+
+.thbas{
+    border-bottom: 1px solid #ddd;
+}
+
+#buttonconnexion{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#donnees {
+    text-align: center;
+}
+
+.banner a {
+    color: inherit; 
+    text-decoration: none;
+}
