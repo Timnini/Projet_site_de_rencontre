@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <title>Inscription</title>
+</head>
+<body>
+    <div class="banner">
+        <h1><a href="acceuil.php">SportMeet </a></h1>
+            <p><em>Rencontrez l'âme sœur sur la piste de votre passion !</em></p>
+        </div>
+        
+        
+<form action="traitement.php" method="post" enctype="multipart/form-data" id="page">
+    <h1 id="inscription">Inscription</h1>
+
+    <h2 id="informationsconfidentiels"> Informations confidentiels : </h2>
+
+    <label for="nom">Prénom :</label>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="password">Mot de passe:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="adresse">Adresse complète :</label>
+    <input type="text" id="adresse" name="adresse" required><br>
+    
+    <h2>Profil :</h2>
+    <label for="photo"> Photos </label><br>
+    <input type="file" name="photo" accept="image/*" /><br><br>
+
+    <label for="pseudo">Identifiant : </label>
+    <input type="text" id="pseudo" name="pseudo" required><br><br>
+    
+    <label>Sexe :</label>
+    <input type="radio" name="sexe" value="homme" required> Homme
+    <input type="radio" name="sexe" value="femme"> Femme
+    <input type="radio" name="sexe" value="autre"> Autre<br><br>
+    
+    <label>Date de naissance :</label>
+    <input type="date" name="date" required><br><br>
+    
+    
+    <label>Lieu de résidence :</label>
+    <select name="city" id="city">
+        <option value="France">France</option>
+        <option value="Autre">Autre</option>
+    </select><br><br>
+       
+    
+    <label>Poids (kg) :</label>
+    <input type="number" name="poids" min="30" max="200" step="1"><br><br>
+    
+    <label>Taille (cm) :</label>
+    <input type="number" name="taille" min="100" max="210" step="1"><br><br>
+
+    <label>Sport : </label>
+    <select name="sport">
+        <option value="pratique occasionnelle">Pratique occasionnelle</option>
+        <option value="souvent">Souvent</option>
+        <option value="Tous les jours">Tous les jours</option>
+        <option value="Acrro au sport">Accro au sport</option>
+    </select><br><br>
+        
+    <label>Sport(s) pratiqué(s) :</label>
+    <input type="text" name="sports_pratiques" required><br><br>
+    
+    
+    <label>Description : </label><br>
+    <textarea id="description" name="description"  rows="4" cols="45"></textarea><br><br>
+     
+
+    <input type="submit" value="Soumettre">
+</form>
+
+</body>
+</html> 
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4eded; 
+    color: #0d0d0d; 
+    padding: 1%; 
+    border-bottom: 0.2% solid black;
+}
+
+
+.banner h1 {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    font-size: 2.5%;
+}
+
+#titre {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    font-size: 50px;
+    background-color: #e7aca5;
+   
+}
+
+a {
+    color: inherit; 
+    text-decoration: none;
+    font-size: 50px;
+}
+
+#page {
+    border: 2px solid black; 
+    padding: 2%; 
+    background-color: white; 
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+#inscription {
+    padding: 5%;
+    display: inline-block; 
+    text-align: center;
+    margin: 0 auto;
+    width: 45%;
+    margin-left: 20%;
+    background-color: white;
+}
+
+#informationsconfidentiels {
+text-decoration: underline;
+
+}
+
