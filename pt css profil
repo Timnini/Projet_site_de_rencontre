@@ -1,0 +1,20 @@
+p{
+	text-indent: 7%;
+	line-height: 2em;
+}
+
+
+#profil{
+	text-align: center;
+}
+
+
+#page{
+	border: 2px solid black;
+	padding: 2%;
+	background-color: white;
+	margin-top: 5%;
+	margin-bottom: 20%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
