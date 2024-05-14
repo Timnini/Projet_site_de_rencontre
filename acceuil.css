@@ -86,7 +86,8 @@ a {
 .clickableTable {
     cursor: pointer;
     width: auto;
-    margin: 0 auto 0 0;
+    margin-left: 38%;
+    margin-right: 38%;
     border-collapse: collapse;
 }
 
@@ -96,11 +97,11 @@ a {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #f4eded;
+    background-color: #9FA8DA;
 }
 
 .clickableTable th {
-    background-color: #3498db;
+    background-color: #9FA8DA;
     color: #fff;
 }
 
