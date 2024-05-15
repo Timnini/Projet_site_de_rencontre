@@ -71,5 +71,17 @@ a {
 
 #informationsconfidentiels {
 text-decoration: underline;
-
 }
+
+#profil{
+text-decoration: underline;
+}
+
+button{
+    background: white;
+    color: black;
+    padding: 1% 3%; 
+    border: none;
+    border-radius: 0.5vw; 
+    cursor: pointer;
+    }
