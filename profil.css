@@ -1,14 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: lightblue;
+    background: linear-gradient(115deg, #7f00ff, #0f056b, #0080ff, #0f056b, #7f00ff);
 }
 
 .banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4eded; 
+    background-color: #9FA8DA; 
     color: #0d0d0d; 
     padding: 10px; 
     border-bottom: 2px solid black;
@@ -46,6 +46,39 @@ button:hover {
     background-color: #2980b9;
 }
 
-#profil{
-    margin-left: 25%
+
+
+
+p, h2{
+    text-indent: 7%;
+    line-height: 2em;
+}
+       
+h1{
+    text-align: center;
+}
+
+    
+#page{
+    border: 2px solid black;
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #9FA8DA;
+    opacity: 0.8;
+}
+
+img{
+    border-radius: 50%;  
+    margin-left: 7%;
+}
+
+#nom{
+    text-indent: 3%;
+}
+#pseudo{
+    text-indent: 3%;
+    line-height: 0em;
 }

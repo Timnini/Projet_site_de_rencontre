@@ -57,48 +57,55 @@ if ($handle) {
 </head>
 <body>      
    
-    <div class="banner">
-<h1><a href="acceuil.php">SportMeet </a></h1>
+<div class="banner">
+    <h1><a href="acceuil.php">SportMeet </a></h1>
     <p><em> Slogan </em></p>
     <button onclick="window.location.href='abonnements.html'">Abonnements</button>
 </div>
-    <h1 id="profil"><u>Profil</u></h1>
-    <h2>Informations personnelles :</h2>
 
-    <img src="<?php echo $image; ?>" alt="pas" width="100" height="100"/>
+<div id="page">
+    <h1><b><u>Profil</u></b></h1>
+    <h2><em>Informations personnelles :</em></h2>
+
+    
+    <img style="float:left" src="<?php echo $image; ?>" alt="pas" width="130" height="130"/>
+    
     <?php
     if (isset($_SESSION['abonnement']) && $_SESSION['abonnement'] === true) {
         echo "<p> Abonné </p>";
     }
     ?>
-    <p> Nom : <?php echo $nom; ?> </p>
-    <p> Pseudo : <?php echo $pseudo; ?></p>
+
+    <p id="nom"> Nom : <?php echo $nom; ?> </p>
+    <p id="pseudo"> Pseudo : <?php echo $pseudo; ?></p> <div style="clear: both"></div>
     <p> Mot de passe : <?php echo $password; ?>
     <button onclick="window.location.href = 'changementmdp.html';"> Changement de mot de passe </button>
-    <p> Date d'inscription : <?php echo $date_inscription; ?>
-</p>
+    <p>Date d'inscription : <?php echo $date_inscription; ?></p>
     <p>Sexe : <?php echo $sexe; ?></p>
     <p>Date de naissance : <?php echo $date_naissance; ?></p>
     <p>Lieu de résidence : <?php echo $city; ?></p>
     <p>Poids : <?php echo $poids; ?> kg</p>
     <p>Taille : <?php echo $taille; ?> cm</p>
-    <p> fréquence sport : <?php echo $sport; ?></p>
-    <p>sport(s) pratiqué(s) : <?php echo $sports_pratiques; ?></p>
-    <p>description : <?php echo $description; ?></p>
+    <p>Fréquence sport : <?php echo $sport; ?></p>
+    <p>Sport(s) pratiqué(s) : <?php echo $sports_pratiques; ?></p>
+    <p>Description : <?php echo $description; ?></p>
+
     <?php
     if (isset($_SESSION['abonnement']) && $_SESSION['abonnement'] === true) {
     echo "<div>personnes ayant visité votre profil : $pseudo_visite </div>";}
     ?>
-    <form action="modificationprofil.php" enctype="multipart/form-data" method="post"> 
+    <form action="modificationprofil.php" enctype="multipart/form-data" method="post" style="float:right"> 
+        <br>
         <button type="submit"> Modifier </button>
     </form>
 
-        <button onclick="redirectToPage()"> Message </button> 
-    <script>
-        function redirectToPage() {
-            // Redirection vers la page de destination
-            window.location.href = 'message.html';
-        }
-    </script>
+    <form action="mesmessages.php" enctype="multipart/form-data" method="post" style="float:left"> 
+        <br>
+        <button type="submit"> Mes messages </button>
+    </form>
+
+</div>
+
+
 </body>
 </html>
