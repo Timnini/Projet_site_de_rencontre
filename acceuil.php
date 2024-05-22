@@ -6,24 +6,7 @@
     <link rel="stylesheet" href="acceuil.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-    <style>
-    .clickableTable {
-        width: 200px;
-        table-layout: fixed;
-        margin-left: 10px;
-        text-align: center;
-    }
-    .clickableTable td {
-        border: 3px solid black;
-        width: 100%;
-        height: 100px;
-        vertical-align: middle;
-    }
-    .clickableTable img {
-        width: 100px;
-        height: 100px;
-    }
-</style>
+    
     <title>Accueil</title>
 </head>
 
@@ -81,7 +64,7 @@ $handle = fopen($fichier, "r");
 // Fonction pour afficher les informations d'un profil
 function afficherProfil($profil) {
     echo '<br>';
-    echo '<table border="3" class="clickableTable">';
+    echo '<table border="5" class="clickableTable">';
     echo '<tr>';
     echo '<td><img src="' . $profil['image'] . '" width="100" height="100"></td>';
     echo '</tr>';
