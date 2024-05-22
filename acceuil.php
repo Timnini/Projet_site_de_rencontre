@@ -64,7 +64,7 @@ $handle = fopen($fichier, "r");
 // Fonction pour afficher les informations d'un profil
 function afficherProfil($profil) {
     echo '<br>';
-    echo '<table border="5" class="clickableTable">';
+    echo '<table border="3" class="clickableTable">';
     echo '<tr>';
     echo '<td><img src="' . $profil['image'] . '" width="100" height="100"></td>';
     echo '</tr>';
