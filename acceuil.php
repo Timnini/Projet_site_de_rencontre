@@ -10,7 +10,7 @@
     .clickableTable {
         width: 200px;
         table-layout: fixed;
-        margin: 10px;
+        margin-left: 10px;
         text-align: center;
     }
     .clickableTable td {
