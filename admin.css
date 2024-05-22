@@ -1,0 +1,31 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(115deg, #7f00ff, #0f056b, #0080ff, #0f056b, #7f00ff);
+
+}
+
+#page {
+    border: 2px solid black; 
+    padding: 3%; 
+    background-color: #9FA8DA; 
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+button {
+    background: blue;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7f00ff;
+}

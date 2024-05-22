@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Redirection avec Boutons</title>
+</head>
+<body>
+    <br><br><<br><br><br>
+    <div id="page">
+    <div> Fonctionnalités </div>
+        <br>
+    <div class="container">
+        <div class="box" >
+            <button onclick="location.href='gestion_utilisateurs.php'"> Gestions utilisateurs </button>
+        </div>
+        <br>
+        <div class="box">
+            <button onclick="location.href='gestion_messagerie.php'"> Gestions messagerie </button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Optionally, you can define the redirection logic in JavaScript functions
+        function redirectToUsers() {
+            window.location.href = 'gestion_utilisateurs.php';
+        }
+
+        function redirectToMessaging() {
+            window.location.href = 'gestion_messagerie.php';
+        }
+
+        // Attach the functions to the buttons if you prefer using JavaScript function calls
+        document.querySelector('button').onclick = redirectToUsers;
+        document.querySelectorAll('button')[1].onclick = redirectToMessaging;
+    </script>
+
+</body>
+</html>
