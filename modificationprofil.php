@@ -56,53 +56,64 @@ if ($handle) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <title>Profil</title>
 </head>
+
 <body>      
    
     <div class="banner">
-<h1><a href="acceuil.php">SportMeet </a></h1>
-    <p><em>Rencontrez l'âme sœur sur la piste de votre passion !</em></p>
-    <button onclick="window.location.href='abonnements.html'">Abonnements</button>
-</div>
+        <h1><a href="acceuil.php">SportMeet </a></h1>
+        <p><em>Rencontrez l'âme sœur sur la piste de votre passion !</em></p>
+        <button onclick="window.location.href='abonnements.html'">Abonnements</button>
+    </div>
+
+    <div id="page">
+
     <h1><u>Profil</u></h1>
     <h2>Informations personnelles :</h2>
 
+
+    <div id="haut">
+    
     <form action="traitementmodif.php" method="post" enctype="multipart/form-data">
 
-    <img src="<?php echo $image; ?>" alt="pas" width="100" height="100"/><br>
-    <button onclick="window.location.href = 'changementphoto.html';"> Changement de photo de profil </button><br><br>
+
+    <img src="<?php echo $image; ?>" alt="pas" width="130" height="130"/><br>
     
-    <input type="text" id="photo" name="photo" value="<?php echo $image; ?>">
+    <em>nom du fichier </em> : <input type="text" id="photo" name="photo" value="<?php echo $image; ?>">
+    
+    <button onclick="window.location.href = 'changementphoto.html';">  Changement de photo de profil  </button>
+    <br><br><br>
+    <a href="#description"><em><ins>modifier la description</ins></em></a>
+    <div style="clear: both"></div>
 
-    <label> Nom :  </label>
-    <input type="text" id="nom" name="nom" required value="<?php echo $nom; ?>"><br>
+    <label> Nom : </label>
+        <input type="text" id="nom" name="nom" required value="<?php echo $nom; ?>"><br>
 
-
-
-   <p> Pseudo : <?php echo $pseudo; ?> </p>
-
+    <label aria-required="true">Pseudo : </label><?php echo $pseudo; ?>
         <input type="text" id="pseudo" name="id" value="<?php echo $pseudo; ?>" style="display: none;">
+    
 
-    <p> Mot de passe :
-    <input type="text" id="password" name="mdp" value="<?php echo $password; ?>">
-</p>
+    
+    <p aria-required="true"> Mot de passe :
+        <input type="text" id="password" name="mdp" value="<?php echo $password; ?>">
+    <div style="clear: both"></div></p>
 
-<label for="adresse">Adresse complète :</label>
-    <input type="text" id="adresse" name="adresse" required value="<?php echo $adresse; ?>"><br>
+    <label for="adresse">Adresse complète :</label>
+        <input type="text" id="adresse" name="adresse" required value="<?php echo $adresse; ?>"><br>
 
-    <label>Sexe :</label>
+    <label aria-required="true">Sexe :</label>
 <input type="radio" name="sexe" value="homme" <?php if ($sexe === "homme") echo "checked"; ?> required> Homme
 <input type="radio" name="sexe" value="femme" <?php if ($sexe === "femme") echo "checked"; ?>> Femme
 <input type="radio" name="sexe" value="autre" <?php if ($sexe === "autre") echo "checked"; ?>> Autre<br>
 
     
-    <label for="">Date de naissance : </label>
+    <label aria-required="true" for="">Date de naissance : </label>
         <input type="date" id="date_naissance" name="date_naissance" value="<?php echo $date_naissance; ?>" readonly><br>
 
-        <label>Lieu de résidence :</label>
-    <select name="city" id="city">
+    <label>Lieu de résidence :</label>
+        <select name="city" id="city">
         <option value="France">France</option>
         <option value="Autre">Autre</option>
-    </select><br>
+        </select><br>
 
     <label for="poids">Poids : </label>
         <input type="number" id="poids" name="poids" value="<?php echo $poids; ?>" readonly><br>
@@ -112,8 +123,8 @@ if ($handle) {
         <input type="number" id="taille" name="taille" value="<?php echo $taille; ?>" readonly><br>
    
 
-        <label>Sport : </label>
-    <select name="sport">
+    <label>Sport : </label>
+        <select name="sport">
         <option value="pratique occasionnelle">Pratique occasionnelle</option>
         <option value="souvent">Souvent</option>
         <option value="Tous les jours">Tous les jours</option>
@@ -121,15 +132,16 @@ if ($handle) {
     </select><br>
 
     <label>Sport(s) pratiqué(s) :</label>
-    <input type="text" name="sports_pratiques" required value="<?php echo $sports_pratiques;?>"><br>
+        <input type="text" name="sports_pratiques" required value="<?php echo $sports_pratiques;?>"><br>
 
     <label for="description">Description :</label><br>
-<textarea id="description" name="description" rows="4" cols="50"><?php echo $description; ?></textarea><br><br>
-<input type="submit" value="Soumettre">
+        <textarea id="description" name="description" rows="6" cols="50" placeholder="Courte description, disponibilités, ..."><?php echo $description; ?></textarea><br><br>
+ <input type="submit" value="Soumettre">
 
  <input type="hidden" name="date_inscription" value ="<?php echo $date_inscription ?>">
  
  <input type="hidden" name="abonnement" value ="<?php echo $abonnement?>">
+</div>
 </form>
 </body>
 </html>
